@@ -37,19 +37,7 @@ def predict_emotion():
 def save_entry():
 
     # Get Date, Predicted Emotion & Text Enter by the user to save the entry
-    date = request.json.get("date")           
-    emotion = request.json.get("emotion")
-    save_text = request.json.get("text")
-
-    save_text = save_text.replace("\n", " ")
-    
-    # CSV Entry
-    entry = f'"{date}","{save_text}","{emotion}"\n'  
-    print(entry)
-
-    with open("./static/assets/data_files/data_entry.csv", "a") as f:
-        f.write(entry)
-    return jsonify("Success")
+    pass
            
                 
 if __name__ == "__main__":
